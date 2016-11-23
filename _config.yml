@@ -1,0 +1,44 @@
+# Name of your blog (this will show up at the top of your page and in the RSS feed)
+name: MINIMO
+
+# Short description (goes below the title; it will also be used in the RSS feed)
+description: Example blog
+
+# Your name, as you want it to appear underneath each post and in the footer
+author: Ruslan Purii
+
+# Your email if you want it to be linked on the contact page
+author_email: purij@e-mail.ua
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - scss
+  - template
+
+# Archivepages for categories and tags
+gems:
+  - jekyll-archives
+
+jekyll-archives:
+  enabled: all
+  layout: archive
+  enabled:
+     - categories
+     - tags
+  permalinks:
+     tag: '/tag/:name/'
+     category: '/:name/'
+
+# How many articles do you wish to appear on the front page:
+paginate: 7

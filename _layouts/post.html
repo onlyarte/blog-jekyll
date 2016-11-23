@@ -1,0 +1,104 @@
+---
+layout: default
+---
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <img src="{{ page.cover }}" alt="post cover" width="100%">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <article class="full-post">
+                <div class="post-category"><a href="/{{ page.categories | first }}">{{ page.categories | first }}</a></div>
+                <header>
+                    <h1>{{ page.title }}</h1>
+                </header>
+
+                {{ content }}
+
+                <span class="social-share pull-right">
+                    <span class="share-text">Share</span>
+                    <a href="#fb"><img src="/files/facebook-logo.png"></a>
+                    <a href="#ig"><img src="/files/instagram-social-network-logo-of-photo-camera.png"></a>
+                    <a href="#tw"><img src="/files/twitter-social-logotype.png"></a>
+                </span>
+            </article>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid post-suggestions">
+    <div class="row row-centered">
+        <div class="col-md-9 col-centered">
+            <div class="suggest-text">You may also like</div>
+        </div>
+    </div>
+    <div class="row  row-centered">
+        {% for post in site.related_posts %}
+            {% if forloop.index <= 3 %}
+                <div class="col-md-3 col-centered col-xs-12 col-sm-3">
+                    <div class="pseudo-img" style="background-image: url('{{ post.cover }}')"></div>
+                    <a href="{{ site.url }}{{ post.url }}"><h4>{{ post.title }}</h4></a>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1 comments">
+            <div class="comments-label" id="comments-counter"> comments</div>
+            
+            <div class="user-comment">
+                <div class="user-pic"></div>
+                <div class="comment-body">
+                    <div class="user-name"><b>John Doe</b></div>
+                    <div class="comment-text">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo!</p>
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="user-comment">
+                <div class="user-pic"></div>
+                <div class="comment-body">
+                    <div class="user-name"><b>John Doe</b></div>
+                    <div class="comment-text">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo!</p>
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="user-comment">
+                <div class="user-pic"></div>
+                <div class="comment-body">
+                    <div class="user-name"><b>John Doe</b></div>
+                    <div class="comment-text">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo!</p>
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="add-comment">
+                <div class="user-pic"></div>
+                <textarea placeholder="Join the discussion"></textarea>
+                <div class="comment-connected pull-right">
+                    <span class="connected-label">Connected with
+                        <a href="#fb"><img src="/files/facebook-logo.png"></a>
+                        <a href="#tw"><img src="/files/twitter-social-logotype.png"></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
