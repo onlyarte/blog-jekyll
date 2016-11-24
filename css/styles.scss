@@ -40,6 +40,7 @@ $space-margin: 9vh;
 body{
     font-family: $font-play;
     color: $color-main;
+    background-image: url("/files/posts/post-1/img-1.jpg");
 }
 
 nav {
@@ -96,7 +97,6 @@ footer{
 }
 
 .preview-cover{
-    background-image: url("/files/posts/post-1/img-1.jpg");
     height: 300px;
     width: 100%;
     background-repeat: no-repeat;
