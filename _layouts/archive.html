@@ -11,6 +11,9 @@ layout: default
         </div>
     </div>
         {% for post in page.posts %}
+            {% if forloop.index > 30 %}
+                {% break %}
+            {% endif %}
             {% assign mod = forloop.index | modulo:2 %}
             {% if mod == 1 %}
                 <div class="row row-centered preview-block">

@@ -1,9 +1,9 @@
 ---
 layout: default
 ---
-
+<script src="/js/index-animation.js"></script>
 <div class="container">
-    {% for post in paginator.posts %}
+    {% for post in site.posts limit: 7 %}
         {% if forloop.first == true %}
             <div class="row">
                 <div class="col-md-12">
@@ -34,11 +34,11 @@ layout: default
 
 <div class="container">
     <div class="row row-centered preview-block">
-        {% for post in paginator.posts %}
+        {% for post in site.posts limit: 7 %}
             {% if forloop.index > 1 and forloop.index < 4 %}
                 <div class="text-justify col-md-5 col-centered">
                     <article class="homepage-preview">
-                        <div class="cover" style="background-image: url('{{ post.cover }}"></div>
+                        <div class="cover" style="background-image: url('{{ post.cover }}')"></div>
                         <div class="post-category"><a href="/{{ post.categories | first }}">{{ post.categories | first }}</a></div>
                         <header>
                             <a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
@@ -55,11 +55,11 @@ layout: default
     </div>
 
     <div class="row row-centered preview-block">
-        {% for post in paginator.posts %}
+        {% for post in site.posts limit: 7 %}
             {% if forloop.index > 3 and forloop.index < 6 %}
                 <div class="text-justify col-md-5 col-centered">
                     <article class="homepage-preview">
-                        <div class="cover" style="background-image: url('{{ post.cover }}"></div>
+                        <div class="cover" style="background-image: url('{{ post.cover }}')"></div>
                         <div class="post-category"><a href="/{{ post.categories | first }}">{{ post.categories | first }}</a></div>
                         <header>
                             <a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
@@ -88,11 +88,11 @@ layout: default
 
 <div class="container">
     <div class="row row-centered preview-block">
-        {% for post in paginator.posts %}
-            {% if forloop.index > 5 and forloop.index < 8 %}
+        {% for post in site.posts limit: 7 %}
+            {% if forloop.index > 5 %}
                 <div class="text-justify col-md-5 col-centered">
                     <article class="homepage-preview">
-                        <div class="cover" style="background-image: url('{{ post.cover }}"></div>
+                        <div class="cover" style="background-image: url('{{ post.cover }}')"></div>
                         <div class="post-category"><a href="/{{ post.categories | first }}">{{ post.categories | first }}</a></div>
                         <header>
                             <a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
@@ -106,8 +106,9 @@ layout: default
                 </div>
             {% endif %}
         {% endfor %}
-        <div class="col-md-2 col-md-offset-5">
-            <button>Load more</button>
-        </div>
     </div>
 </div>
+<div class="container" id="extendable">
+    
+</div>
+<div class="infinite-spinner"></div>
