@@ -96,7 +96,11 @@ footer{
 }
 
 .preview-cover{
-    
+    background-image: url("/files/posts/post-1/img-1.jpg");
+    height: 300px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .post-category a, .post-category a:visited {
