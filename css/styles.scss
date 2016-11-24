@@ -96,10 +96,7 @@ footer{
 }
 
 .preview-cover{
-    height: 300px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    
 }
 
 .post-category a, .post-category a:visited {
@@ -185,7 +182,6 @@ a, a:hover, a:visited{
         }
         .cover{
             @extend .preview-cover;
-            background-color: black!important;
             margin-bottom: 35px;
         }
     }
