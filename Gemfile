@@ -25,5 +25,4 @@ group :jekyll_plugins do
    gem "jekyll-paginate"
 
 gem 'jekyll-sass-converter'
-gem 'github-pages', group: :jekyll_plugins
 end
