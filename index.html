@@ -38,7 +38,7 @@ layout: default
             {% if forloop.index > 1 and forloop.index < 4 %}
                 <div class="text-justify col-md-5 col-centered">
                     <article class="homepage-preview">
-                        <div class="cover" style="background-image: url({{ post.cover }})"></div>
+                        <div class="cover" style="background-image: url('{{ post.cover }}')"></div>
                         <div class="post-category"><a href="/{{ post.categories | first }}">{{ post.categories | first }}</a></div>
                         <header>
                             <a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>

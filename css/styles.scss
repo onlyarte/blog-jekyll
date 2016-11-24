@@ -185,7 +185,7 @@ a, a:hover, a:visited{
         }
         .cover{
             @extend .preview-cover;
-            
+            background-color: black;
             margin-bottom: 35px;
         }
     }
