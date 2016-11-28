@@ -23,7 +23,6 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - scss
   - template
 
 # Archivepages for categories and tags
@@ -37,8 +36,8 @@ jekyll-archives:
      - categories
      - tags
   permalinks:
-     tag: '/tag/:name/'
-     category: '/:name/'
+     tag: '../tag/:name/'
+     category: '../:name/'
 
 # How many articles do you wish to appear on the front page:
 paginate: 7

@@ -1,0 +1,35 @@
+{
+  "posts" : [
+      
+    
+      
+    { "link":"/photodiary/2016/11/22/The-perfect-weekend-getaway.html", "cover":"/files/homepage.png", "category":"Photodiary", "title":"The perfect weekend getaway", "excerpt" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." },
+      
+    
+      
+    { "link":"/lifestyle/2016/11/18/More-than-just-a-music-festival.html", "cover":"/files/post-prev-1.jpg", "category":"Lifestyle", "title":"More than just a music festival", "excerpt" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." },
+      
+    
+      
+    { "link":"/lifestyle/2016/11/11/Top-10-songs-for-running.html", "cover":"/files/post-prev-5.jpg", "category":"Lifestyle", "title":"Top 10 songs for running", "excerpt" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." },
+      
+    
+      
+    { "link":"/photodiary/2016/11/10/A-day-exploring-the-Alps.html", "cover":"/files/post-prev-4.jpg", "category":"Photodiary", "title":"A day exploring the Alps", "excerpt" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." },
+      
+    
+      
+    { "link":"/photodiary/2016/11/02/American-dream.html", "cover":"/files/post-prev-3.jpg", "category":"Photodiary", "title":"American dream", "excerpt" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." },
+      
+    
+      
+    { "link":"/lifestyle/2016/10/31/Life-tastes-better-with-coffee.html", "cover":"/files/post-prev-2.jpg", "category":"Lifestyle", "title":"Life tastes better with coffee", "excerpt" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." },
+      
+    
+      
+    { "link":"/lifestyle/2016/10/21/Cold-winter-days.html", "cover":"/files/post-prev-6.jpg", "category":"Lifestyle", "title":"Cold winter days", "excerpt" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." }
+      
+    
+      
+  ]
+}
