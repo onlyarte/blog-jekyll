@@ -3,41 +3,43 @@ layout: default
 ---
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1 text-center">
-            <h1>{{ page.title }}</h1>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1 text-center">
+      <h1>{{ page.title }}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <img src="{{ page.posts.last.cover }}" alt="homepage image" width="100%">
+    </div>
+  </div>
+    {% for post in page.posts %}
+      {% if forloop.index > 30 %}
+        {% break %}
+      {% endif %}
+      {% assign mod = forloop.index | modulo:2 %}
+      {% if mod == 1 %}
+        <div class="row row-centered preview-block">
+      {% endif %}
+        <div class="text-justify col-md-5 col-centered">
+          <article class="homepage-preview">
+            <div class="cover" style="background-image: url('{{ post.cover }}')"></div>
+            <div class="post-category">
+              <a href="/{{ page.categories | first }}">{{ page.categories | first }}</a>
+            </div>
+            <header>
+              <a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
+            </header>
+            {% if post.excerpt %}
+              {{ post.excerpt }}
+            {% else %}
+              {{ post.content }}
+            {% endif%}
+          </article>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <img src="{{ page.posts.last.cover }}" alt="homepage image" width="100%">
-        </div>
-    </div>
-        {% for post in page.posts %}
-            {% if forloop.index > 30 %}
-                {% break %}
-            {% endif %}
-            {% assign mod = forloop.index | modulo:2 %}
-            {% if mod == 1 %}
-                <div class="row row-centered preview-block">
-            {% endif %}
-                <div class="text-justify col-md-5 col-centered">
-                    <article class="homepage-preview">
-                        <div class="cover" style="background-image: url('{{ post.cover }}"></div>
-                        <div class="post-category"><a href="/{{ page.categories | first }}">{{ page.categories | first }}</a></div>
-                        <header>
-                            <a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
-                        </header>
-                        {% if post.excerpt %}
-                            {{post.excerpt}}
-                        {% else %}
-                            {{ post.content }}
-                        {% endif%}
-                    </article>
-                </div>
-            {% if mod == 0 %}
-                </div>
-            {% endif %}
-        {% endfor %}
-    </div>
+      {% if mod == 0 %}
+          </div>
+      {% endif %}
+    {% endfor %}
+  </div>
 </div>

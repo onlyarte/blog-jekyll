@@ -2,12 +2,8 @@
 ---
 {
   "posts" : [
-      
     {% for post in site.posts %}
-      
-    { "link":"{{ post.url }}", "cover":"{{ post.cover }}", "category":"{{ post.categories | first }}", "title":"{{ post.title }}", "excerpt" : "{{ post.excerpt }}" }{% unless forloop.last %},{% endunless %}
-      
+      { "link":"{{ post.url }}", "cover":"{{ post.cover }}", "category":"{{ post.categories | first }}", "title":"{{ post.title }}", "excerpt" : "{{ post.excerpt }}" }{% unless forloop.last %},{% endunless %}
     {% endfor %}
-      
   ]
 }
