@@ -3,112 +3,122 @@ layout: default
 ---
 <script src="/js/index-animation.js"></script>
 <div class="container">
-    {% for post in site.posts limit: 7 %}
-        {% if forloop.first == true %}
-            <div class="row">
-                <div class="col-md-12">
-                    <img src="{{ post.cover }}" alt="homepage image" width="100%">
-                </div>
+  {% for post in site.posts limit: 7 %}
+    {% if forloop.first == true %}
+
+      <div class="row">
+        <div class="col-md-12">
+          <img src="{{ post.cover }}" alt="homepage image" width="100%">
+        </div>
+      </div>
+
+      <div class="row" id="main-fixed-post">
+        <div class="col-md-10 col-md-offset-1">
+          <article>
+            <div class="post-category">
+              <a href="/{{ post.categories | first }}">{{ post.categories | first }}</a>
             </div>
-            <div class="row" id="main-fixed-post">
-                <div class="col-md-10 col-md-offset-1">
-                    <article>
-                        <div class="post-category"><a href="/{{ post.categories | first }}">{{ post.categories | first }}</a></div>
-                        <header>
-                            <a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
-                        </header>
-                        {% if post.excerpt %}
-                            {{post.excerpt}}
-                        {% else %}
-                            {{ post.content }}
-                        {% endif%}
-                        <br><br>
-                        <input class="leave-comment" placeholder="Leave a comment">
-                        <button id="cm-send"><img src="/files/send.png"></button>
-                    </article>
-                </div>
-            </div>
-        {% endif %}
-    {% endfor %}
+            <header>
+              <a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
+            </header>
+            {% if post.excerpt %}
+              {{post.excerpt}}
+            {% else %}
+              {{ post.content }}
+            {% endif%}
+            <br><br>
+            <input class="leave-comment" placeholder="Leave a comment">
+            <button id="cm-send"><img src="/files/send.png"></button>
+          </article>
+        </div>
+      </div>
+
+    {% endif %}
+  {% endfor %}
 </div>
 
 <div class="container">
-    <div class="row row-centered preview-block">
-        {% for post in site.posts limit: 7 %}
-            {% if forloop.index > 1 and forloop.index < 4 %}
-                <div class="text-justify col-md-5 col-centered">
-                    <article class="homepage-preview">
-                        <div class="cover" style="background-image: url('{{ post.cover }}')"></div>
-                        <div class="post-category"><a href="/{{ post.categories | first }}">{{ post.categories | first }}</a></div>
-                        <header>
-                            <a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
-                        </header>
-                        {% if post.excerpt %}
-                            {{post.excerpt}}
-                        {% else %}
-                            {{ post.content }}
-                        {% endif%}
-                    </article>
-                </div>
-            {% endif %}
-        {% endfor %}
-    </div>
+  <div class="row row-centered preview-block">
+    {% for post in site.posts limit: 7 %}
+      {% if forloop.index > 1 and forloop.index < 4 %}
+        <div class="text-justify col-md-5 col-centered">
+          <article class="homepage-preview">
+            <div class="cover" style="background-image: url('{{ post.cover }}')"></div>
+            <div class="post-category">
+              <a href="/{{ post.categories | first }}">{{ post.categories | first }}</a>
+            </div>
+            <header>
+              <a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
+            </header>
+            {% if post.excerpt %}
+              {{post.excerpt}}
+            {% else %}
+              {{ post.content }}
+            {% endif%}
+          </article>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
 
-    <div class="row row-centered preview-block">
-        {% for post in site.posts limit: 7 %}
-            {% if forloop.index > 3 and forloop.index < 6 %}
-                <div class="text-justify col-md-5 col-centered">
-                    <article class="homepage-preview">
-                        <div class="cover" style="background-image: url('{{ post.cover }}')"></div>
-                        <div class="post-category"><a href="/{{ post.categories | first }}">{{ post.categories | first }}</a></div>
-                        <header>
-                            <a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
-                        </header>
-                        {% if post.excerpt %}
-                            {{post.excerpt}}
-                        {% else %}
-                            {{ post.content }}
-                        {% endif%}
-                    </article>
-                </div>
-            {% endif %}
-        {% endfor %}
-    </div>
+  <div class="row row-centered preview-block">
+    {% for post in site.posts limit: 7 %}
+      {% if forloop.index > 3 and forloop.index < 6 %}
+        <div class="text-justify col-md-5 col-centered">
+          <article class="homepage-preview">
+            <div class="cover" style="background-image: url('{{ post.cover }}')"></div>
+            <div class="post-category">
+              <a href="/{{ post.categories | first }}">{{ post.categories | first }}</a>
+            </div>
+            <header>
+              <a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
+            </header>
+            {% if post.excerpt %}
+              {{post.excerpt}}
+            {% else %}
+              {{ post.content }}
+            {% endif%}
+          </article>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
 </div>
 
 <div class="container-fluid" id="get-news">
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3 text-center">
-            <h1>Sign up for our newsletter!</h1>
-            <input type="email" placeholder="Enter a valid email adress" id="gn-mail">
-            <button id="gn-send"><img src="/files/send.png"></button>
-        </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 text-center">
+      <h1>Sign up for our newsletter!</h1>
+      <input type="email" placeholder="Enter a valid email adress" id="gn-mail">
+      <button id="gn-send"><img src="/files/send.png"></button>
     </div>
+  </div>
 </div>
 
 <div class="container">
-    <div class="row row-centered preview-block">
-        {% for post in site.posts limit: 7 %}
-            {% if forloop.index > 5 %}
-                <div class="text-justify col-md-5 col-centered">
-                    <article class="homepage-preview">
-                        <div class="cover" style="background-image: url('{{ post.cover }}')"></div>
-                        <div class="post-category"><a href="/{{ post.categories | first }}">{{ post.categories | first }}</a></div>
-                        <header>
-                            <a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
-                        </header>
-                        {% if post.excerpt %}
-                            {{post.excerpt}}
-                        {% else %}
-                            {{ post.content }}
-                        {% endif%}
-                    </article>
-                </div>
-            {% endif %}
-        {% endfor %}
-    </div>
+  <div class="row row-centered preview-block">
+    {% for post in site.posts limit: 7 %}
+      {% if forloop.index > 5 %}
+        <div class="text-justify col-md-5 col-centered">
+          <article class="homepage-preview">
+            <div class="cover" style="background-image: url('{{ post.cover }}')"></div>
+            <div class="post-category">
+              <a href="/{{ post.categories | first }}">{{ post.categories | first }}</a>
+            </div>
+            <header>
+              <a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
+            </header>
+            {% if post.excerpt %}
+              {{post.excerpt}}
+            {% else %}
+              {{ post.content }}
+            {% endif%}
+          </article>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
 </div>
-<div class="container" id="extendable">
-    
-</div>
+
+<div class="container" id="extendable"></div>
 <div class="infinite-spinner"></div>
